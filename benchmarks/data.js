@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1764620794497,
+  "lastUpdate": 1764642402919,
   "repoUrl": "https://github.com/pmcconville-hub/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
@@ -116,6 +116,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/3188d209b78ad8267fb0afb70bf3050174116230"
         },
         "date": 1764620793732,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "ef9b6f634145fcb9434894c78ae7e082b9a88581",
+          "message": "fix: n8n_test_workflow webhookId resolution and form handling (v2.28.2) (#462)",
+          "timestamp": "2025-12-01T22:33:25+01:00",
+          "tree_id": "026244aca6861837436dd0bfadb89a84776aa77e",
+          "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/ef9b6f634145fcb9434894c78ae7e082b9a88581"
+        },
+        "date": 1764642402303,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
