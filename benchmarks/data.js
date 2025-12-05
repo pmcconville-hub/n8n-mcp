@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1764728783490,
+  "lastUpdate": 1764944792959,
   "repoUrl": "https://github.com/pmcconville-hub/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
@@ -178,6 +178,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/527e9874ab6b26b3dbae131f5259f81bac1cd1ab"
         },
         "date": 1764728783086,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "60479e0eb47a7c83e77f36e2667a73e2e3ec115a",
+          "message": "test: update tests for v2.28.5 behavior changes (v2.28.6) (#470)\n\n- Update n8n-version tests: 'v' prefix now supported in version strings\n- Update n8n-validation tests: empty settings now return minimal defaults\n  { executionOrder: 'v1' } instead of {} to avoid API rejection (Issue #431)\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-authored-by: Romuald Członkowski <romualdczlonkowski@MacBook-Pro-Romuald.local>\nCo-authored-by: Claude <noreply@anthropic.com>",
+          "timestamp": "2025-12-05T13:38:06+01:00",
+          "tree_id": "399afed181c7f2e2552ec90c91b0418f9dcc6382",
+          "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/60479e0eb47a7c83e77f36e2667a73e2e3ec115a"
+        },
+        "date": 1764944792319,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
