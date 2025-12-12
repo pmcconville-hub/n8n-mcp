@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1765311966934,
+  "lastUpdate": 1765549567992,
   "repoUrl": "https://github.com/pmcconville-hub/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
@@ -333,6 +333,35 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/b92e5114634e52aee1fbb477396a21f8c229d470"
         },
         "date": 1765311966160,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "romualdczlonkowski@MacBook-Pro-Romuald.local",
+            "name": "Romuald Członkowski"
+          },
+          "committer": {
+            "email": "romualdczlonkowski@MacBook-Pro-Romuald.local",
+            "name": "Romuald Członkowski"
+          },
+          "distinct": true,
+          "id": "c6f3733fbd6de37b1514f5800cb8d43bded30eee",
+          "message": "fix: upgrade npm for OIDC trusted publishing support\n\nOIDC trusted publishing requires npm >= 11.5.1, but Node.js 20/22\nships with npm 10.x. Added explicit npm upgrade step before publish.\n\nAlso upgraded to Node.js 22 for better npm compatibility.\n\nConceived by Romuald Członkowski - www.aiadvisors.pl/en\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>",
+          "timestamp": "2025-12-12T14:17:23+01:00",
+          "tree_id": "9ba01f9525d17511d27acffe82237b3ec98b5e23",
+          "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/c6f3733fbd6de37b1514f5800cb8d43bded30eee"
+        },
+        "date": 1765549567319,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
