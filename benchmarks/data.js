@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1766348785393,
+  "lastUpdate": 1766521576984,
   "repoUrl": "https://github.com/pmcconville-hub/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
@@ -513,6 +513,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/a40f6a5077001fbfbdc7529663a4ebcba608f5e6"
         },
         "date": 1766348784720,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "705d31c35e93f868b58add97f074500857368381",
+          "message": "fix: mcpTrigger nodes no longer flagged as disconnected (#503) (#506)\n\nFixed validation bug where mcpTrigger nodes were incorrectly flagged as\n\"disconnected nodes\" when using n8n_update_partial_workflow or\nn8n_update_full_workflow. This blocked ALL updates to MCP server workflows.\n\nChanges:\n- Extended validateWorkflowStructure() to check all 7 connection types\n  (main, error, ai_tool, ai_languageModel, ai_memory, ai_embedding, ai_vectorStore)\n- Updated trigger node validation to accept either outgoing OR inbound connections\n- Added 7 new tests covering all AI connection types\n\nFixes #503\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-authored-by: Romuald Członkowski <romualdczlonkowski@MacBook-Pro-Romuald.local>\nCo-authored-by: Claude Opus 4.5 <noreply@anthropic.com>",
+          "timestamp": "2025-12-23T18:50:55+01:00",
+          "tree_id": "bbe4aa26da9600ff36b8951b04e6cf8434e3f51a",
+          "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/705d31c35e93f868b58add97f074500857368381"
+        },
+        "date": 1766521576707,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
