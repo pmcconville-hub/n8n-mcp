@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1766586386918,
+  "lastUpdate": 1766759202713,
   "repoUrl": "https://github.com/pmcconville-hub/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
@@ -575,6 +575,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/20663dad0d3b4064796ccf50ef3db27b55b68b85"
         },
         "date": 1766586386619,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "808088f25eccf3cf73a90017af9f5abdd1893886",
+          "message": "docs: fix connection keys documentation to say \"node names\" not \"node IDs\" (#510) (#511)\n\nThe documentation incorrectly stated connection keys should be \"node IDs\"\nwhen n8n actually requires \"node names\". This caused workflow creation\nfailures for AI-generated workflows.\n\nChanges:\n- tools-n8n-manager.ts: \"Keys are source node names (the name field, not id)\"\n- n8n-create-workflow.ts: \"Keys are source node names (not IDs)\"\n- Fixed example: \"Webhook\"/\"Slack\" instead of \"webhook_1\"/\"slack_1\"\n- get-template.ts: clarified \"source node names\"\n\nCloses #510\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-authored-by: Romuald Członkowski <romualdczlonkowski@MacBook-Pro-Romuald.local>\nCo-authored-by: Claude Opus 4.5 <noreply@anthropic.com>",
+          "timestamp": "2025-12-26T14:50:58+01:00",
+          "tree_id": "9110d3624af99a21e45601fe3c7e9c9248362159",
+          "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/808088f25eccf3cf73a90017af9f5abdd1893886"
+        },
+        "date": 1766759202354,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
