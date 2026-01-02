@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1766759202713,
+  "lastUpdate": 1767364004809,
   "repoUrl": "https://github.com/pmcconville-hub/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
@@ -606,6 +606,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/808088f25eccf3cf73a90017af9f5abdd1893886"
         },
         "date": 1766759202354,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f10772a9d28f67fca6e14ccf7477af9d99651830",
+          "message": "fix: preserve workflow data during serialization (Issue #517) (#519)\n\nFixed a critical bug where workflow mutation data was corrupted during\nserialization to Supabase. The recursive toSnakeCase() function was\nconverting nested workflow data, mangling:\n- Connection keys (node names like \"Webhook\" → \"_webhook\")\n- Node field names (typeVersion → type_version)\n\nSolution: Replace recursive conversion with selective mutationToSupabaseFormat()\nthat only converts top-level field names to snake_case while preserving\nnested workflow data exactly as-is.\n\nImpact:\n- 98.9% of workflow mutations had corrupted data\n- Deployability rate improved from ~21% to ~68%\n\nChanges:\n- src/telemetry/batch-processor.ts: New selective converter\n- tests/unit/telemetry/batch-processor.test.ts: 3 new regression tests\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-authored-by: Romuald Członkowski <romualdczlonkowski@MacBook-Pro-Romuald.local>\nCo-authored-by: Claude Opus 4.5 <noreply@anthropic.com>",
+          "timestamp": "2026-01-02T10:44:13+01:00",
+          "tree_id": "b2f3780bf0bc44b0edbd7e423710a1f87f21b11b",
+          "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/f10772a9d28f67fca6e14ccf7477af9d99651830"
+        },
+        "date": 1767364004444,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
