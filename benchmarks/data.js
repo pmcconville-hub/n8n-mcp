@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1767795961347,
+  "lastUpdate": 1767817562873,
   "repoUrl": "https://github.com/pmcconville-hub/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
@@ -761,6 +761,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/861005eeedf880be2489bc197b85a385735c0356"
         },
         "date": 1767795960908,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "ce2c94c1a5ca64f82fb5b011d7739bdfd0711c66",
+          "message": "fix: recognize dynamic AI Tool nodes in validator (Issue #522) (#526)\n\nWhen n8n connects any node to an AI Agent's tool slot, it creates a\ndynamic Tool variant at runtime (e.g., googleDrive → googleDriveTool).\nThese don't exist in npm packages, causing false \"unknown node type\"\nerrors.\n\nAdded validation-time inference: when a *Tool node type is not found,\ncheck if the base node exists. If yes, treat as valid with warning.\n\nChanges:\n- workflow-validator.ts: Add INFERRED_TOOL_VARIANT logic\n- node-similarity-service.ts: Add 98% confidence for valid Tool variants\n- Added 7 unit tests for inferred tool variant functionality\n\nFixes #522\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-authored-by: Romuald Członkowski <romualdczlonkowski@MacBook-Pro-Romuald.local>\nCo-authored-by: Claude Opus 4.5 <noreply@anthropic.com>",
+          "timestamp": "2026-01-07T18:09:55+01:00",
+          "tree_id": "6b568155d3d2e1333dba098ad082367114a4634f",
+          "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/ce2c94c1a5ca64f82fb5b011d7739bdfd0711c66"
+        },
+        "date": 1767817562503,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
