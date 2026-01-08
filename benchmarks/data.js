@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1767817562873,
+  "lastUpdate": 1767860770272,
   "repoUrl": "https://github.com/pmcconville-hub/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
@@ -792,6 +792,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/ce2c94c1a5ca64f82fb5b011d7739bdfd0711c66"
         },
         "date": 1767817562503,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "28667736cd7aeca5e898c68406706990a72fcb20",
+          "message": "fix: use lowercase for community node names to match n8n convention (#529)\n\n* fix: use lowercase for community node names to match n8n convention\n\nCommunity nodes in n8n use lowercase node class names (e.g., chatwoot\nnot Chatwoot). The extractNodeNameFromPackage method was incorrectly\ncapitalizing node names, causing validation failures.\n\nChanges:\n- Fix extractNodeNameFromPackage to use lowercase instead of capitalizing\n- Add case-insensitive fallback in getNode for robustness\n- Update tests to expect lowercase node names\n- Bump version to 2.32.1\n\nFixes the case sensitivity bug where MCP stored Chatwoot but n8n\nexpected chatwoot.\n\nConceived by Romuald Członkowski - www.aiadvisors.pl/en\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\n\n* chore: rebuild community nodes database with lowercase names\n\nRebuilt database after fixing extractNodeNameFromPackage to use\nlowercase node names matching n8n convention.\n\nConceived by Romuald Członkowski - www.aiadvisors.pl/en\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\n\n---------\n\nCo-authored-by: Romuald Członkowski <romualdczlonkowski@MacBook-Pro-Romuald.local>\nCo-authored-by: Claude Opus 4.5 <noreply@anthropic.com>",
+          "timestamp": "2026-01-08T08:27:56+01:00",
+          "tree_id": "12d64f00fae9c4f941dbbdf14f4a351117e69556",
+          "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/28667736cd7aeca5e898c68406706990a72fcb20"
+        },
+        "date": 1767860770037,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
