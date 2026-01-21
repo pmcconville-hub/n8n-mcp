@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1768335996458,
+  "lastUpdate": 1769005585598,
   "repoUrl": "https://github.com/pmcconville-hub/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
@@ -916,6 +916,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/974a9fb3492fe2c4984ee0549085d531cdc6242a"
         },
         "date": 1768335995790,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "fad343797719f96c33417ef32b54fe4107d51581",
+          "message": "fix: memory leak in SSE session reset (#542) (#544)\n\nWhen SSE sessions are recreated every 5 minutes, the old session's MCP\nserver was not being closed, causing:\n- SimpleCache cleanup timer continuing to run indefinitely\n- Database connections remaining open\n- Cached data (~50-100MB per session) persisting in memory\n\nAdded server.close() call before transport.close() in resetSessionSSE(),\nmirroring the existing cleanup pattern in removeSession().\n\nFixes #542\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\nCo-authored-by: Claude Opus 4.5 <noreply@anthropic.com>",
+          "timestamp": "2026-01-21T13:56:16+01:00",
+          "tree_id": "a7886bb6cbe8230ac4306a4c4993459b90d6a5db",
+          "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/fad343797719f96c33417ef32b54fe4107d51581"
+        },
+        "date": 1769005585229,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
