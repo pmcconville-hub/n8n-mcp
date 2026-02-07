@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1770452789012,
+  "lastUpdate": 1770474387738,
   "repoUrl": "https://github.com/pmcconville-hub/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
@@ -1040,6 +1040,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/1b328d8168608905ae0f4efd654d79c22d718507"
         },
         "date": 1770452788365,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "38aa70261ae9a012d9bb157deffcc2a0e9046d08",
+          "message": "fix: use text/html;profile=mcp-app MIME type for MCP Apps resources (#577)\n\nThe ext-apps spec requires RESOURCE_MIME_TYPE (text/html;profile=mcp-app)\nfor hosts to recognize resources as MCP Apps. Without the profile parameter,\nClaude Desktop/web fails with \"Failed to load MCP App: the resource may\nexceed the 5 MB size limit.\"\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\nCo-authored-by: Claude Opus 4.6 <noreply@anthropic.com>",
+          "timestamp": "2026-02-07T15:18:50+01:00",
+          "tree_id": "c5dce9274e01c012b23f1f83d7896067c7b62302",
+          "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/38aa70261ae9a012d9bb157deffcc2a0e9046d08"
+        },
+        "date": 1770474386990,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
