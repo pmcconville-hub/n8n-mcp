@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1770527796162,
+  "lastUpdate": 1770611677948,
   "repoUrl": "https://github.com/pmcconville-hub/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
@@ -1133,6 +1133,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/c6015817146aa62981e129227bf9e72e40e27b1a"
         },
         "date": 1770527795831,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "8217229e2fb4615e44caafd3e8869da6d30f80b1",
+          "message": "chore: bump version to 2.35.0 and update CHANGELOG (#584)\n\nConceived by Romuald Członkowski - www.aiadvisors.pl/en\n\nCo-authored-by: Claude Opus 4.6 <noreply@anthropic.com>",
+          "timestamp": "2026-02-09T04:38:56+01:00",
+          "tree_id": "2acb07d5da038ccb1b618ba84ea66e9b63aba2ac",
+          "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/8217229e2fb4615e44caafd3e8869da6d30f80b1"
+        },
+        "date": 1770611677657,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
