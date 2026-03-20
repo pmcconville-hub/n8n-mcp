@@ -1,39 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1773865611948,
+  "lastUpdate": 1774038402872,
   "repoUrl": "https://github.com/pmcconville-hub/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
-      {
-        "commit": {
-          "author": {
-            "email": "devangkantharia@gmail.com",
-            "name": "devangkantharia",
-            "username": "devangkantharia"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "2f5a8571427a6ce3dc614c5435f61925edebb376",
-          "message": "Added Antigravity Setup Instructions (#452)\n\n* Add Antigravity setup documentation\n\nDocument the setup process for Antigravity with n8n MCP server, including preconditions, installation steps, configuration, and best practices.\n\n* Add Antigravity integration guide to README\n\nAdded a new section for Antigravity integration.",
-          "timestamp": "2025-11-29T00:56:12+01:00",
-          "tree_id": "d1cc0c90e0cdbfefde9f4021b0293f4c75643384",
-          "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/2f5a8571427a6ce3dc614c5435f61925edebb376"
-        },
-        "date": 1764383181259,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "sample - array sorting - small",
-            "value": 0.0136,
-            "range": "0.3096",
-            "unit": "ms",
-            "extra": "73341 ops/sec"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -1536,6 +1505,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/14962a39b648d0e22d40b7848950b761d458f34c"
         },
         "date": 1773865611405,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "47a1cb135db7fd4a9f02d694286c5091dc86cbe2",
+          "message": "feat: implement transferWorkflow operation in n8n_update_partial_workflow (#644) (#649)\n\nAdd transferWorkflow diff operation to move workflows between n8n projects:\n- TransferWorkflowOperation type with destinationProjectId field\n- WorkflowDiffEngine validates and tracks transfer intent\n- Handler calls PUT /workflows/{id}/transfer after update\n- N8nApiClient.transferWorkflow() method\n- Zod schema validates destinationProjectId is non-empty\n- Tool description and documentation updated\n- inferIntentFromOperations case for transfer\n\nAlso fixes two pre-existing bugs found during review:\n- continueOnError path now properly extracts/propagates activation flags\n- Debug log in updateConnectionReferences shows correct old name\n\nBased on work by @djakielski in PR #645.\n\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en",
+          "timestamp": "2026-03-20T17:50:00+01:00",
+          "tree_id": "1d2537cd8b69eecf2e98ceadad07b68cbc5df9ef",
+          "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/47a1cb135db7fd4a9f02d694286c5091dc86cbe2"
+        },
+        "date": 1774038402545,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
