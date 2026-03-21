@@ -1,39 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1774038402872,
+  "lastUpdate": 1774124810829,
   "repoUrl": "https://github.com/pmcconville-hub/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
-      {
-        "commit": {
-          "author": {
-            "email": "56956555+czlonkowski@users.noreply.github.com",
-            "name": "Romuald Członkowski",
-            "username": "czlonkowski"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "7d9b45688718cdb186c2018d85f0acd19fb48148",
-          "message": "fix: pin MCP SDK version in Docker build files (v2.27.1) (#456)\n\n* fix: pin MCP SDK version in Docker build files (#454)\n\nThe Docker image 2.27.0 was missing the Zod fix from #450 because:\n- package.runtime.json had @modelcontextprotocol/sdk@^1.13.2\n- Dockerfile builder had @modelcontextprotocol/sdk@^1.12.1\n\nBoth now use the pinned version 1.20.1 (no caret) to match package.json.\nAlso pinned zod@3.24.1 in Dockerfile for consistency.\n\nFixes #454\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\n\n* chore: bump version to 2.27.1 and update CHANGELOG\n\n- Version bump from 2.27.0 to 2.27.1\n- Added CHANGELOG entry for #454 fix (Docker SDK version)\n- Added missing CHANGELOG entry for 2.27.0 (n8n_deploy_template)\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\n\n---------\n\nCo-authored-by: Claude <noreply@anthropic.com>",
-          "timestamp": "2025-11-29T10:13:16+01:00",
-          "tree_id": "e744e19e2463d673547bb5c40cc7f9a46dc364ad",
-          "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/7d9b45688718cdb186c2018d85f0acd19fb48148"
-        },
-        "date": 1764426376379,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "sample - array sorting - small",
-            "value": 0.0136,
-            "range": "0.3096",
-            "unit": "ms",
-            "extra": "73341 ops/sec"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -1536,6 +1505,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/47a1cb135db7fd4a9f02d694286c5091dc86cbe2"
         },
         "date": 1774038402545,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "be3d07dbdc6e18c05da99337920cce94426f7a6a",
+          "message": "feat: add n8n_manage_datatable MCP tool with full CRUD (#640) (#650)\n\n* feat: add n8n_create_data_table MCP tool and projectId for create workflow (#640)\n\nAdd new MCP tool to create n8n data tables via the REST API:\n- n8n_create_data_table tool definition with name + columns schema\n- handleCreateDataTable handler with Zod validation and N8nApiError handling\n- N8nApiClient.createDataTable() calling POST /data-tables\n- DataTable, DataTableColumn, DataTableColumnResponse types per OpenAPI spec\n- Column types: string | number | boolean | date | json\n- Input validation: .min(1) on table name and column names\n- Tool documentation with examples, use cases, and pitfalls\n\nAlso adds projectId parameter to n8n_create_workflow for enterprise\nproject support, and fixes stale management tool count in health check.\n\nBased on work by @djakielski in PR #646.\nCo-Authored-By: Dominik Jakielski <dominik.jakielski@urlaubsguru.de>\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>\n\n* feat: replace n8n_create_data_table with n8n_manage_datatable (10 actions)\n\nReplaces the single-purpose n8n_create_data_table tool with a comprehensive\nn8n_manage_datatable tool covering all 10 n8n data table API endpoints:\n\nTable operations: createTable, listTables, getTable, updateTable, deleteTable\nRow operations: getRows, insertRows, updateRows, upsertRows, deleteRows\n\n- Filter system with and/or logic and 8 condition operators\n- Dry-run support for updateRows, upsertRows, deleteRows\n- Pagination, sorting, and full-text search for row listing\n- 9 new N8nApiClient methods for all data table endpoints\n- Shared error handler and consolidated Zod schemas\n- Comprehensive tool documentation with examples per action\n- 36 handler tests + 18 API client tests\n\nBREAKING: n8n_create_data_table removed. Use n8n_manage_datatable with\naction=\"createTable\" instead.\n\nBased on work by @djakielski in PR #646.\nCo-Authored-By: Dominik Jakielski <dominik.jakielski@urlaubsguru.de>\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en",
+          "timestamp": "2026-03-21T19:06:22+01:00",
+          "tree_id": "ee72a38f5e97543560230663aac76a8f9a3c26cc",
+          "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/be3d07dbdc6e18c05da99337920cce94426f7a6a"
+        },
+        "date": 1774124810111,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
