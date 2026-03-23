@@ -1,39 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1774211199168,
+  "lastUpdate": 1774232813560,
   "repoUrl": "https://github.com/pmcconville-hub/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
-      {
-        "commit": {
-          "author": {
-            "email": "56956555+czlonkowski@users.noreply.github.com",
-            "name": "Romuald Członkowski",
-            "username": "czlonkowski"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "ef9b6f634145fcb9434894c78ae7e082b9a88581",
-          "message": "fix: n8n_test_workflow webhookId resolution and form handling (v2.28.2) (#462)",
-          "timestamp": "2025-12-01T22:33:25+01:00",
-          "tree_id": "026244aca6861837436dd0bfadb89a84776aa77e",
-          "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/ef9b6f634145fcb9434894c78ae7e082b9a88581"
-        },
-        "date": 1764642402303,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "sample - array sorting - small",
-            "value": 0.0136,
-            "range": "0.3096",
-            "unit": "ms",
-            "extra": "73341 ops/sec"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -1536,6 +1505,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/ec19c9dade49d89995b77af364d7310c1665c1b5"
         },
         "date": 1774211198739,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "1f0738e637d8db5307ad531317045fd49aa3773a",
+          "message": "fix: auto-inject webhookId on webhook nodes during create/update (#643) (#657)\n\nn8n 2.10+ requires webhookId (UUID) on webhook-type nodes for proper\nwebhook URL registration. Without it, webhooks silently fail with 404.\nThe n8n UI always generates webhookId but programmatic creation via\nn8n-mcp did not.\n\nAdd ensureWebhookIds() helper that injects crypto.randomUUID() on\nwebhook, webhookTrigger, formTrigger, and chatTrigger nodes when\nwebhookId is missing. Called from both cleanWorkflowForCreate() and\ncleanWorkflowForUpdate(). Existing webhookId values are preserved.\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\nCo-authored-by: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "timestamp": "2026-03-22T23:20:34+01:00",
+          "tree_id": "c8fdb9aa2c1d8334d1a2a31c098756adbef2fc1d",
+          "url": "https://github.com/pmcconville-hub/n8n-mcp/commit/1f0738e637d8db5307ad531317045fd49aa3773a"
+        },
+        "date": 1774232813173,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
